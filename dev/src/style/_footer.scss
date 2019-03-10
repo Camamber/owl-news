@@ -1,0 +1,45 @@
+footer {
+	height: 125px;
+	background: $secondary;
+	a {
+		color: $primary-text;
+		text-decoration: none;
+	}
+	ul {
+		padding: 0;
+		li {
+			list-style-type: none;
+		}
+	}
+	
+
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 0.3fr 1fr 0.5fr;
+		
+		div {
+  			justify-self: start;
+  			align-self: center;
+		}
+
+		.sitemap {
+
+			display: flex;
+			ul {
+				margin-right: 60px;
+
+				li{
+					line-height: 1.7em;
+				}
+			}
+
+		}
+		.social {			
+			justify-self: end;
+			
+			ul li {
+				display:inline;
+			}
+		}	
+	}
+}
