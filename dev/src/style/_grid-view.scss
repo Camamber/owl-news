@@ -1,0 +1,24 @@
+.feed {
+	.news-preview {
+		width: 285px;
+		margin-bottom: 35px;
+		hr {
+			margin: 6px 0;
+			border: none;
+			color: red;
+			background-color: red; 
+			height: 2px; 
+			width: 80px;
+		}
+		img {
+			margin-bottom: 10px;
+		}
+		.title {
+			font-size: 20px;
+		}
+		.date {
+			font-size: 13px;
+			color: $secondary-text;
+		}
+	}
+}

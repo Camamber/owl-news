@@ -4,19 +4,13 @@ footer {
 	a {
 		color: $primary-text;
 		text-decoration: none;
-	}
-	ul {
-		padding: 0;
-		li {
-			list-style-type: none;
-		}
-	}
-	
+	}	
 
 	.wrapper {
 		display: grid;
 		grid-template-columns: 1fr 0.3fr 1fr 0.5fr;
-		
+		grid-template-rows: 125px;
+
 		div {
   			justify-self: start;
   			align-self: center;
