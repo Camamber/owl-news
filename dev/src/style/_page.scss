@@ -14,7 +14,15 @@ html {
 		font-weight: 400;
 		font-size: 14px;
 		
-		.wrapper {
+		.wrapper {		
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			column-gap: 20px;
+			grid-row-gap: 0;
+			grid-template-areas:
+	        "c c c c c c c c c s s s"
+	        "fl fl fl fl ft fm fm fm fm fm fs fs";
+			grid-template-rows: auto 125px;
 			margin: 0 30px;
 		}
 

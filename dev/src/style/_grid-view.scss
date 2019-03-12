@@ -1,6 +1,12 @@
 .feed {
+	// display: grid;
+	// grid-template-columns: repeat(9, 1fr);
+	// column-gap: 20px;
+	// grid-row-gap: 0;
 	.news-preview {
-		width: 285px;
+		// grid-column-start: 1; 
+  //   	grid-column-end: 4; 
+		//width: 285px;
 		margin-bottom: 35px;
 		hr {
 			margin: 6px 0;
@@ -11,6 +17,7 @@
 			width: 80px;
 		}
 		img {
+
 			margin-bottom: 10px;
 		}
 		.title {
