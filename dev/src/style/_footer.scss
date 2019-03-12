@@ -1,12 +1,13 @@
 footer {
-	height: 125px;
 	background: $secondary;
+	
 	a {
 		color: $primary-text;
 		text-decoration: none;
 	}	
 
 	.wrapper {
+		height: 125px;
 		div {
   			justify-self: start;
   			align-self: center;
