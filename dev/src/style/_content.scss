@@ -24,11 +24,8 @@
 			.view-style {
 				display: flex;
 				justify-content: space-between;
-				img {
+				#grid-view, #flow-view {
 					cursor: pointer;
-					background: url('../img/icon-grid.png');
-					width: 25px;
-					height: 25px;
 				}
 			}
 
