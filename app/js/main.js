@@ -1,7 +1,8 @@
+
+
 var btn_grid = document.getElementById('grid-view'),
 	btn_flow = document.getElementById('flow-view'),
 	feed = document.getElementById('feed');
-
 
 btn_grid.addEventListener('click', function() {
 	if (!btn_grid.classList.contains('active')) {
@@ -32,5 +33,12 @@ btn_flow.addEventListener('click', function() {
 		feed.classList.remove('grid-feed');
 		feed.classList.add('flow-feed');
 	}
+});
+
+$(document).ready(function(){
+  $('#slider').slick({
+  	'arrows': false,
+  	'autoplay': true
+  });
 });
 //# sourceMappingURL=main.js.map

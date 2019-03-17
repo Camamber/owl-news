@@ -7,7 +7,7 @@ footer {
 	}	
 
 	.wrapper {
-		height: 125px;
+		grid-template-rows: 0 0 125px;
 		div {
   			justify-self: start;
   			align-self: center;
