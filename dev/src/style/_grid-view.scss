@@ -44,4 +44,12 @@
     	grid-column-start: 7; 
      	grid-column-end: 10; 
     } 
+
+    animation: collaps 2s;
+}
+
+
+@keyframes collaps{
+    0%{opacity:0;}
+    100%{opacity:1;}
 }

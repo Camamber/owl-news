@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Owl News - Главная</title>
+    <title>Owl News - Избранное</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="Most popular esports tournaments and Twitch channels of 2018">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
 
     <link rel="icon" type="image/png" href="img/favicon.png" />  
     <link rel="stylesheet" href="css/main.css">
@@ -26,7 +26,6 @@
 <body>
 
     //= partials/_header.html
-    //= partials/_slider.html
     //= partials/_content.html
 	//= partials/_footer.html
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -34,6 +33,11 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
     <script src="js/main.js"></script>
+	<script type="text/javascript">
+        flow();
+		$('#twitter-widget').hide();
+		$($('.menu').children()[0]).toggleClass('active').next().toggleClass('active');
+	</script>
 </body>
 
 </html>
