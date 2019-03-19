@@ -4,7 +4,7 @@
 	border: 2px solid #FFFFFF;
 	border-radius: 5px;
 	display:inline-block;
-}
-.btn:hover {
-	background: $secondary;
+	&:hover {
+		background: $secondary;
+	}
 }

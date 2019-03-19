@@ -24,10 +24,9 @@ header {
 					color: $primary-text;
 					text-decoration: none;
 				}
-				
-			}
-			li:hover {
-				background: $secondary;
+				&:hover {
+					background: $secondary;
+				}
 			}
 
 			.search-box {
@@ -42,11 +41,10 @@ header {
 					color: $primary-text;
 					font-size: 16px;
 				}
+				&:hover {
+					background: none;
+				}	
 			}
-			
-			.search-box:hover {
-				background: none;
-			}	
 
 			.active {
 				background: $secondary;
