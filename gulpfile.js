@@ -110,7 +110,7 @@ gulp.task('js:build', function() {
         .pipe(rigger()) // импортируем все указанные файлы в main.js
         .pipe(sourcemaps.init()) //инициализируем sourcemap
         // .pipe(uglify()) // минимизируем js
-        // .pipe(minify()) // минимизируем js
+        .pipe(minify()) // минимизируем js
         .pipe(sourcemaps.write('./')) //  записываем sourcemap
         .pipe(gulp.dest(path.build.js)) // положим готовый файл
         .pipe(webserver.reload({ stream: true })); // перезагрузим сервер
