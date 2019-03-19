@@ -33,8 +33,7 @@ var path = {
         css: 'dev/src/style/**/*.scss',
         img: 'dev/src/img/**/*.*',
         fonts: 'dev/src/fonts/**/*.*'
-    },
-    clean: './dev/build'
+    }
 };
 /* настройки сервера */
 var config = {
@@ -147,28 +146,12 @@ gulp.task('image:build', function() {
     });
 });
 
-// удаление каталога build 
-gulp.task('clean:build', function() {
-    del.sync(path.clean);
-    return new Promise(function(resolve, reject) {
-        resolve();
-    });
-});
 
 // очистка кэша
 gulp.task('cache:clear', function() {
     cache.clearAll();
 });
 
-// сборка
-// gulp.task('build', [
-//     'clean:build',
-//     'html:build',
-//     'css:build',
-//     'js:build',
-//     'fonts:build',
-//     'image:build'
-// ]);
 gulp.task('build', gulp.parallel(
     // 'clean:build',
     'html:build',
@@ -189,15 +172,7 @@ gulp.task('watch', function() {
 });
 
 
-// задача по умолчанию
-// gulp.task('default', [
-//     'clean:build',
-//     'build',
-//     'webserver',
-//     'watch'
-// ]);
 gulp.task('default', gulp.series(
-    // 'clean:build',
     'build',
     'webserver',
     'watch'

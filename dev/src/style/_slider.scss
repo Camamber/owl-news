@@ -13,16 +13,9 @@
 		    .info {    	
 		    	width: 70%;
 		    	margin-right: 30px;
-			    .btn-more {
-			    	cursor: pointer;
-				    padding: 18px 50px;
-				    border: 2px solid #fff;
-				    border-radius: 5px;
-				    display: inline-block;
-				    
-			    }
-			    .btn-more:hover {
-					background: $secondary;
+				.btn-more {
+					@extend .btn;
+					padding: 18px 50px;
 				}	    
 
 				h2 {
