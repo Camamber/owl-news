@@ -14,11 +14,11 @@ var autoprefixerList = [
 /* пути к исходным файлам (src), к готовым файлам (build), а также к тем, за изменениями которых нужно наблюдать (watch) */
 var path = {
     build: {
-        html: 'app/',
-        js: 'app/js/',
-        css: 'app/css/',
-        img: 'app/img/',
-        fonts: 'app/fonts/'
+        html: 'docs/',
+        js: 'docs/js/',
+        css: 'docs/css/',
+        img: 'docs/img/',
+        fonts: 'docs/fonts/'
     },
     src: {
         html: 'dev/src/*.html',
@@ -39,7 +39,7 @@ var path = {
 /* настройки сервера */
 var config = {
     server: {
-        baseDir: './app'
+        baseDir: './docs'
     },
     notify: false
 };
