@@ -1,0 +1,31 @@
+li {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 27px;
+	font-size: 18px;
+	background: $secondary;
+	border-bottom: 1px solid rgba(84, 84, 84, 0.45);
+	input {
+		display: none;/* <--скрываем дефолтный чекбокс */
+	}
+	span {/* <-- стилизируем новый */
+		cursor: pointer;
+		height: 15px;
+	 	width: 15px;
+		display: inline-block;
+		position: relative;
+		background: #DBDBDB;
+		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius:50%;
+		padding:3px;
+	}
+	[type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
+		cursor: pointer;
+		content: '•';
+	  	position: absolute;
+    	top: -16px;
+    	left:0;
+		font-size:43px;
+	  	color:red;
+	}
+}

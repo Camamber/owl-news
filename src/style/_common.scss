@@ -1,0 +1,10 @@
+.btn {	
+	cursor: pointer;
+	padding: 18px 24px;
+	border: 2px solid #FFFFFF;
+	border-radius: 5px;
+	display:inline-block;
+	&:hover {
+		background: $secondary;
+	}
+}

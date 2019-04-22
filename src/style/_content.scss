@@ -1,0 +1,59 @@
+#content {
+
+	margin: 35px 0 45px 0;
+
+	.bread {
+		margin-bottom: 20px;
+		font-size: 20px;
+		
+		hr {
+			margin-top: 2px;
+		    border: none;
+		    color: red;
+		    background-color: red; 
+		    height: 2px; 
+		    width: 80px;
+		}
+	}
+
+	.wrapper {
+		#news {
+			width: 100%;
+		    grid-area: c;
+
+			.view-style {
+				display: flex;
+				justify-content: space-between;
+				#grid-view, #flow-view {
+					cursor: pointer;
+				}
+			}
+
+			@import "grid-view";
+			@import "flow-view";
+			.more {
+				display: flex;
+				justify-content: center;
+				.btn-more {
+					@extend .btn;
+					p {
+				 		font-size: 18px;
+					}
+				}
+			}
+
+		}
+
+		#sidebar {
+			grid-area: s;
+			hr {
+				width: 70px;
+			}
+
+			.filter {
+				margin-bottom: 40px;
+				@import "filter";
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+footer {
+	background: $secondary;
+	
+	a {
+		color: $primary-text;
+		text-decoration: none;
+	}	
+
+	.wrapper {
+		grid-template-rows: 0 0 125px;
+		div {
+  			justify-self: start;
+  			align-self: center;
+		}
+
+		.logo {
+			grid-area: fl;
+		}
+
+		.to-top {
+			grid-area: ft;
+		}
+
+		.sitemap {
+			grid-area: fm;
+			display: flex;
+			ul {
+				margin-right: 60px;
+				li{
+					line-height: 1.7em;
+				}
+			}
+		}
+		
+		.social {	
+			grid-area: fs;		
+			justify-self: end;
+			
+			ul li {
+				display:inline;
+			}
+		}	
+	}
+}

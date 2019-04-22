@@ -1,0 +1,32 @@
+#slider {	
+	.slide {
+		height: 420px;
+		.blur {
+			float: right;
+		    height: 100%;
+		    width: 60%;
+		    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+		    background: rgba(18, 17, 22, 0.8);
+		    display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		    .info {    	
+		    	width: 70%;
+		    	margin-right: 30px;
+				.btn-more {
+					@extend .btn;
+					padding: 18px 50px;
+				}	    
+
+				h2 {
+		    		font-size: 28px;
+		    		margin-bottom: 10px;
+		    	}
+		    	p {
+		    		font-size: 18px;
+		    		margin-bottom: 20px;
+		    	}
+			}
+		}
+	}
+}

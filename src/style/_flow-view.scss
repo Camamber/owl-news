@@ -1,0 +1,44 @@
+.flow-feed {
+	.news-preview {
+	   	display: grid;
+		grid-template-columns: repeat(9, 1fr);
+  		grid-template-areas:
+            "pr pr pr dt dt dt dt dt dt"
+	        "pr pr pr t t t t t t"
+	        "pr pr pr d d d d d d";
+		column-gap: 20px;
+		grid-row-gap: 0;
+		border-bottom: 1px solid rgba(84, 84, 84, 0.45);
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+
+		hr {
+			display: none;
+		}
+		img {
+			grid-area: pr;
+			width: 285px;
+		}
+		.title {
+			grid-area: t;
+			font-size: 24px;
+		}
+		.date {
+			grid-area: dt;
+			font-size: 18px;
+			color: $secondary-text;
+		}
+		.description {
+			grid-area: d;
+			font-size: 18px;
+		}
+
+	}
+    animation: expand 2s;
+}
+
+
+@keyframes expand {
+    0%{opacity:0;}
+    100%{opacity:1;}
+}

@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	body {	
+		background: $background;
+		color: $primary-text;
+
+		font-family: franklin-gothic-compressed, sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		
+		.wrapper {		
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			column-gap: 20px;
+			grid-row-gap: 0;
+			grid-template-areas:
+			"hl hl hl hl hl hm hm hm hm hm hm hm"
+	        "c c c c c c c c c s s s"
+	        "fl fl fl fl ft fm fm fm fm fm fs fs";
+			margin: 0 30px;
+		}
+
+		ul {
+			li {
+				list-style-type: none;
+			}
+		}
+	}
+}
