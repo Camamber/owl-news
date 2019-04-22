@@ -1,10 +1,10 @@
 <template>
-    <div class="slide" :style="{ background: 'url('+require(`../img/${ src }`)+')'}">
+    <div class="slide" :style="{ background: 'url('+require(`../img/${ news.img }`)+')'}">
         <div class="blur">
             <div class="info">
-                <h2>Всё, что нужно знать перед началом ESL One Katowice 2019</h2>
-                <p>Уже 19-го февраля в Польше стартует очередной турнир серии ESL One, участники которого разыграют между собой призовой фонд в $300,000. Единственной командой — представительницей СНГ-региона на турнире станет отобравшаяся от Европы Gambit Esports.</p>
-                <div class="btn-more">Подробнее</div>
+                <h2>{{news.title}}</h2>
+                <p>{{news.description}}</p>
+                <div class="btn-more" v-on:click="route" >Подробнее</div>
             </div>  
         </div>
     </div>
@@ -12,9 +12,19 @@
 <script>
 
 export default {
-	props: ['src'],
+	props: {
+        news: {
+            type: Object,
+            required: true
+        }
+    },
     data() {
-        return { msh:"hg" }
-    }  
+        return { }
+    },
+    methods: {
+        route() { 
+           alert(`Тут будет роут к news/${this.news.slug}`);
+        }
+    }
 }
 </script>

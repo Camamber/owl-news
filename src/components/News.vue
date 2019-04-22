@@ -45,7 +45,7 @@
 	        />
     	</div>
        	<div class="more">
-            <div class="btn-more">
+            <div v-on:click="more" class="btn-more">
                 <p>Больше новостей</p>
             </div>
         </div>
@@ -54,6 +54,7 @@
 
 <script>
 import NewsItem from './NewsItem.vue'
+
 
 let newsId = 1
 export default {
@@ -74,6 +75,18 @@ export default {
 				this.isActive = false;
 			}
 		},
+        more() {
+            for(let i = 0; i<3;i++){
+                this.news.push({
+                    'id': newsId++,
+                    'title': this.news[i].title,
+                    'date': this.news[i].date,
+                    'img': this.news[i].img,
+                    'slug': this.news[i].slug,
+                    'description': this.news[i].description
+                })
+            }
+        },
 		filter (categories) {
 			this.news = this.news.filter(n => {
 				return n.id > 3
@@ -90,7 +103,7 @@ export default {
                     title: 'Юбилейный 25-ый фильм о Джеймсе Бонде снова перенесли',
                     date: '19.02.2019, 15:43',
                     img: 'preview-1.jpg',
-                    slug: '',
+                    slug: 'yubileynyy-25-yy-film-o-dzheymse-bonde-snova-perenesli',
                     description: 'Что-то не везет юбилейному фильму о Джеймсе Бонде. Недавно поклонников "бондианы" поразила новость о том, что Дэнни Бойл покинул режиссерское кресло юбилейного фильма о Джеймсе Бонде из-за творческих разногласий с продюсерами.'
                 },
                 {

@@ -2,11 +2,8 @@
 
 > A Vue.js project
   ToDo:
-  * header component
-  * footer component
-  * slider link
-  * news slug
-  * more btn
+  * scss
+  * filter params
   * Fav page
   Epic:
   * hover toltip
