@@ -16,6 +16,9 @@ export default {
         'owl-header': Header,
         'owl-footer': Footer
     },
+    mounted() {
+        this.$store.dispatch('restoreNewsView')
+    }
 }
 </script>
 

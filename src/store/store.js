@@ -15,6 +15,13 @@ export const store = new Vuex.Store({
 
 	},
 	getters: {
+		getStoredView(state) {
+			if (localStorage.view) {
+		    	return localStorage.view
+		    } else {
+		    	return null
+		    }
+		},
 		isGrid(state) {
 			return state.view === 'grid-feed'
 		},
@@ -48,7 +55,7 @@ export const store = new Vuex.Store({
 			state.categories = cat_list
 		},
 		setNewsView(state, view) {
-			if(state.view !== view)
+			if(view && state.view !== view)
 				state.view = view
 		}
 	},
@@ -82,11 +89,13 @@ export const store = new Vuex.Store({
     	},
     	setFilter(context, filter) {
 			context.commit('setFilter', filter)
-
-
 		},
 		setNewsView(context, view) {
+			localStorage.view = view
 			context.commit('setNewsView', view)
+		},
+		restoreNewsView(context) {
+			context.commit('setNewsView', this.getters.getStoredView);
 		}
 	}
 	
