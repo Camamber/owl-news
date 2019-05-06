@@ -19,8 +19,11 @@
 			grid-area: pr;
 			width: 285px;
 		}
-		.title {
+		a {
 			grid-area: t;
+		}
+		.title {
+			
 			font-size: 24px;
 		}
 		.date {

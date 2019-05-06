@@ -1,7 +1,7 @@
 <template>
     <header>  
         <div class="wrapper">
-            <div class="logo"><router-link to="/"><img src="../img/logo.png" alt=""></router-link></div>
+            <div class="logo"><router-link to="/"><img src="/static/logo.png" alt=""></router-link></div>
             <ul class="menu">
                   <li v-for="item in items" :class="{ active: item.name == selected }">
                     <router-link :to="getPath(item.name)">{{ item.title }}</router-link>
@@ -21,13 +21,11 @@ export default {
             items: [
                 {
                     name: 'Home',
-                    title: 'Все новости',
-                    path:'/'
+                    title: 'Все новости'
                 },
                 {
                     name: 'Favorite',
-                    title: 'Мои новости', 
-                    path:'/' 
+                    title: 'Мои новости'
                 }
             ],
             selected: this.$router.currentRoute.name

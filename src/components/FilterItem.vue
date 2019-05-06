@@ -1,17 +1,30 @@
 <template>
     <li>
-        <p>{{name}}</p>
+        <p>{{category.name}}</p>
         <label>
-            <input type='checkbox'>
+            <input  v-model="checked" type='checkbox'>
             <span></span>
         </label>
     </li>
 </template>
 <script>
 export default {
-	props: ['name'],
+	props: {
+        category: {
+            type: Object,
+            required: true
+        }
+    },
     data() {
-        return { }
-    }  
+        return { 
+            checked: false
+        }
+    },
+    watch: {
+        checked() {
+
+            this.$store.dispatch('setFilter', {'id': this.category.id, 'checked': this.checked})
+        }
+    }
 }
 </script>

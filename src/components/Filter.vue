@@ -1,14 +1,12 @@
 <template>
-    <ul class="filter" v-if="categories.length">
+    <ul class="filter" v-if="$store.state.categories.length">
         <filter-item
-            v-for="category in categories"
+            v-for="category in $store.state.categories"
             :key="category.id"
-            :name="category.name"
+            :category="category"
         />
     </ul>
-    <p v-else>
-        No filters.
-    </p>
+    <p v-else></p>
 </template>
 
 <script>
@@ -21,53 +19,6 @@ export default {
     },
     data () {
         return {
-            categories: [
-                {
-                    id: catId++,
-                    slug: '',
-                    name: 'Знаменитости'
-                },                
-                {
-                    id: catId++,
-                    slug: 'style',
-                    name: 'Стиль'
-                },                
-                {
-                    id: catId++,
-                    slug: 'eat',
-                    name: 'Еда'
-                },                
-                {
-                    id: catId++,
-                    slug: '',
-                    name: 'Wellness'
-                },                
-                {
-                    id: catId++,
-                    slug: '',
-                    name: 'Психология'
-                },                
-                {
-                    id: catId++,
-                    slug: 'techno',
-                    name: 'Техно'
-                },                
-                {
-                    id: catId++,
-                    slug: 'afisha',
-                    name: 'Афиша'
-                },                
-                {
-                    id: catId++,
-                    slug: 'fun',
-                    name: 'Fun'
-                },                
-                {
-                    id: catId++,
-                    slug: 'travel',
-                    name: 'Путешествия'
-                }
-            ]
         }
     }
 }

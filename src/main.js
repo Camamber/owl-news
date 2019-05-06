@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import titleMixin from './mixins/titleMixin'
+import {store} from './store/store.js'
 
 Vue.config.productionTip = false
 Vue.mixin(titleMixin);
@@ -12,6 +13,7 @@ Vue.mixin(titleMixin);
 new Vue({
   	el: '#app',
   	router,
+  	store: store,
   	components: { App },
  	template: '<App/>'
 })

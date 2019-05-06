@@ -3,7 +3,7 @@
         <news-slider></news-slider>
         <section id="content">
             <div class="wrapper">
-                <news :title="'Новости'"></news>
+                <news-feed :title="'Новости'"></news-feed>
                 <div id="sidebar">
                     <div class="bread">
                         <p>Фильтр</p>
@@ -20,9 +20,9 @@
 
 <script>
 
-import Slider from './Slider.vue'
-import Filter from './Filter.vue'
-import News from './News.vue'
+import Slider from '@/components/Slider.vue'
+import Filter from '@/components/Filter.vue'
+import News from '@/components/NewsFeed.vue'
 import { Tweet, Moment, Timeline } from 'vue-tweet-embed'
 
 export default {
@@ -31,7 +31,7 @@ export default {
     components: {
         'category-filter': Filter,
         'news-slider': Slider,
-        'news': News,
+        'news-feed': News,
         'twitter-timeline': Timeline,
     },
     data () {

@@ -5,7 +5,7 @@
   "author": "EgerbSher <egorka.k2009@ukr.net>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --host 0.0.0.0 --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
@@ -13,10 +13,12 @@
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-slick": "^1.1.15",
-    "vue-tweet-embed": "^2.2.1"
+    "vue-tweet-embed": "^2.2.1",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "axios": "^0.18.0",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
@@ -52,7 +54,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": ">=3.1.11",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "engines": {
