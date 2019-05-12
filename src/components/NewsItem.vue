@@ -1,9 +1,9 @@
 <template>
     <div class="news-preview">
-		<img :src="require(`../img/${ news.img }`)">
-		<router-link :to="`news/${news.id}`"><p class="title">{{news.title}}</p></router-link>
+		<img :src="require(`../img/${ news.image }`)">
+		<router-link :to="`news/${news.news_id}`"><p class="title">{{news.title}}</p></router-link>
 		<hr>
-		<p class="date">{{news.date}}</p>
+		<p class="date">{{dateFormat()}}</p>
 		<p class="description">{{news.description}}</p>
 	</div>
 </template>
@@ -25,6 +25,15 @@ export default {
   	},
     data() {
         return { }
-    }  
+	},
+	methods: {
+		dateFormat() {
+			let date = new Date(this.news.date)
+			return `${this.pad(date.getDate())}.${this.pad(date.getMonth()+1)}.${this.pad(date.getFullYear())} ${this.pad(date.getHours())}:${this.pad(date.getMinutes())}`
+		},
+		pad(n) {
+			return n < 10 ? '0'+n : n
+		}
+	}
 }
 </script>

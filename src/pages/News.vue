@@ -1,22 +1,19 @@
 <template>
     <div>   
-        <news v-if="$store.state.current_news.id == this.$route.params.id" :news="$store.state.current_news"></news>
+        <single-news v-if="$store.state.current_news.news_id == this.$route.params.id"></single-news>
     </div>
 </template>
 
 <script>
-import axios from 'axios'
-import News from '@/components/News.vue'
+import SingleNews from '@/components/SingleNews.vue'
 
 export default {
     name: 'News',
     components: {
-        'news': News
+        'single-news': SingleNews
     },
     data () {
-        return { 
-            
-        }
+        return { }
     },
     created() {
         this.$store.dispatch('retrieveNews', this.$route.params.id)
