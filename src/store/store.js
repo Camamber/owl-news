@@ -36,6 +36,9 @@ export const store = new Vuex.Store({
 		retrieveNewsList(state, news_list) {           
 			state.news = news_list
 		},
+		appendNewsList(state, news_list) {           
+			 state.news.push(...news_list)
+		},
 		retrieveNews(state, news) {
 			state.current_news = news
 		},
@@ -60,10 +63,28 @@ export const store = new Vuex.Store({
 		}
 	},
 	actions: {
-		retrieveNewsList(context) {
-            axios.get(`/news?filters=${this.getters.filters}`)
+		retrieveNewsList(context, params) {
+			console.log(params)
+			let query = [];
+			if(this.state.filters.length>0){
+				query.push(`filters=${this.getters.getFilters}`);
+			}
+			if(params){
+				if(params.offset) {
+					query.push(`offset=${params.offset}`);
+				}
+				if(params.count) {
+					query.push(`count=${params.count}`);
+				}
+			}
+
+            axios.get(`/news?${query.join('&')}`)
                 .then(response => {
-                    context.commit('retrieveNewsList', response.data)
+					if(params) {
+						context.commit('appendNewsList', response.data)
+					} else {
+						context.commit('retrieveNewsList', response.data)	
+					}
                 })
                 .catch(error => {
                     console.log(error)

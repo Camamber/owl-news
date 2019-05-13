@@ -73,7 +73,7 @@ export default {
 			this.$store.dispatch('setNewsView', 'flow-feed');
 		},
         more() {
-        	
+        	this.$store.dispatch('retrieveNewsList', {'offset': this.$store.state.news.length, 'count':3});
         }
 	},
     created() {
