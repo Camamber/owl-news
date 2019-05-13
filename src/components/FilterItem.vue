@@ -1,8 +1,10 @@
 <template>
     <li>
-        <p>{{category.name}}</p>
+        <p>
+            <router-link :to="{ name: 'Category', params: { slug: category.slug }}">{{category.name}}</router-link>
+        </p>
         <label>
-            <input  v-model="checked" type='checkbox'>
+            <input v-model="checked" type='checkbox'>
             <span></span>
         </label>
     </li>
@@ -22,7 +24,6 @@ export default {
     },
     watch: {
         checked() {
-
             this.$store.dispatch('setFilter', {'id': this.category.id, 'checked': this.checked})
         }
     }

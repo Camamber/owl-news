@@ -1,6 +1,10 @@
 #slider {	
 	.slide {
 		height: 420px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		
 		.blur {
 			float: right;
 		    height: 100%;

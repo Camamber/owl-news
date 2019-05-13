@@ -1,5 +1,5 @@
 <template>
-    <div class="slide" :style="{ background: 'url('+require(`../img/${ news.img }`)+')'}">
+    <div class="slide" :style="{ backgroundImage: 'url('+require(`../img/${ news.image }`)+')'}">
         <div class="blur">
             <div class="info">
                 <h2>{{news.title}}</h2>
@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         route() { 
-           alert(`Тут будет роут к news/${this.news.slug}`);
+           this.$router.push({ name: 'News', params: { id: this.news.news_id } })
         }
     }
 }
